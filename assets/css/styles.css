@@ -1,0 +1,96 @@
+/* --------------------FONTS--------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+/*-----------------------------------------------------*/
+
+/* ---------------------VARIABLES-----------------------*/
+:root{
+    --header-height: 3rem;
+
+    --main-color: rgb(20, 80, 92);
+    --white: white;
+    --black: black;
+
+    --font-family: 'Merriweather', serif;
+    --h1-size: 1.5rem;
+    --h2-size: 1.2rem;
+    --h3-size: 1rem;
+    --big-font: 2.5rem;
+    --normal-font: .93rem;
+    --small-font: .81rem;
+    --smaller-font: .75rem;
+
+    --font-regular: 400;
+    --font-bold: 700;
+
+    --mg-0-25: .21rem;
+    --mg-0-5: .5rem;
+    --mg-0-75: .75rem;
+    --mg-1: 1rem;
+    --mg-1-25: 1.25rem;
+    --mg-1-5: 1.5rem;
+    --mg-2: 2rem;
+    --mg-2-5: 2.5rem;
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    --img-transition: .3s;
+    --img-hidden: hidden;
+    --img-scale: scale(1.1);
+}
+
+@media screen and (min-width: 968px){
+    :root{
+    --h1-size: 2.25rem;
+    --h2-size: 1.75rem;
+    --h3-size: 1.25rem;
+    --big-font: 4rem;
+    --normal-font: 1rem;
+    --small-font: .875rem;
+    --smaller-font: .813rem;
+    }
+}
+
+/*---------------------BASE------------------------*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--font-family);
+    font-size: var(--normal-font);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+h1,h2,h3{
+    color: var(--main-color);
+    font-weight: var(--font-bold);
+    font-family: var(--font-family);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img,video{
+    max-width: 100%;
+    height: auto;
+}
+
+button,input{
+    border: none;
+    font-family: var(--font-family);
+    font-size: var(--normal-font);
+}
