@@ -94,3 +94,122 @@ button,input{
     font-family: var(--font-family);
     font-size: var(--normal-font);
 }
+
+button{
+    cursor: pointer;
+}
+
+input{
+    outline: none;
+}
+
+/* ---------------------------CLASSES------------------------- */
+
+.section{
+    padding: 4.5rem 0 2.5rem;
+}
+
+.section-title{
+    font-size: var(--h2-size);
+    color: var(--main-color);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: var(--mg-2);
+}
+
+.container{
+    max-width: 968px;
+    margin-left: var(--mg-1);
+    margin-right: var(--mg-1);
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* --------------------------HEADER------------------------ */
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--main-color);
+}
+
+/* --------------------------NAV BAR---------------------------*/
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo,.nav-toggle{
+    color: var(--white);
+}
+
+.nav-logo{
+    font-weight: var(--font-bold);
+}
+
+.nav-toggle{
+    font-size: 1.2rem;
+    cursor: pointer;   
+}
+
+.nav-menu{
+    position: relative;
+}
+
+@media screen and (max-width: 765px){
+    .nav-menu{
+        position: fixed;
+        background-color: var(--white);
+        right: -100%;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        box-shadow: -1px 0 4px grey solid;
+        padding: 3rem;
+        transition: .4s;
+    }
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.nav-link{
+    color: var(--black);
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+}
+
+.nav-link:hover{
+    color: var(--main-color);
+}
+
+.nav-close{
+    font-size: 2.5rem;
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.nav-search{
+    position: absolute;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+/* -----------SHOW MENU----------------*/
+.show-menu{
+    right: 0;
+}
