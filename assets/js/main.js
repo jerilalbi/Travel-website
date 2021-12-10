@@ -24,3 +24,10 @@ function linkAction(){
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+//change home bg image
+
+function changeBgImage(image,place_name){
+  document.getElementById('background_image').src = image;
+  document.getElementById('place_name').innerHTML = place_name;
+}
