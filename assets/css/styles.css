@@ -1,5 +1,5 @@
 /* --------------------FONTS--------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Merriweather:wght@300;400;700;900&display=swap');
 /*-----------------------------------------------------*/
 
 /* ---------------------VARIABLES-----------------------*/
@@ -11,10 +11,13 @@
     --black: black;
 
     --font-family: 'Merriweather', serif;
+    --title-font-family: 'Dancing Script', cursive;
     --h1-size: 1.5rem;
     --h2-size: 1.2rem;
     --h3-size: 1rem;
-    --big-font: 2.5rem;
+    --very-big-font: 5rem;
+    --big-font: 1.7rem;
+    --title-font-size: 2.5rem;
     --normal-font: .93rem;
     --small-font: .81rem;
     --smaller-font: .75rem;
@@ -44,7 +47,9 @@
     --h1-size: 2.25rem;
     --h2-size: 1.75rem;
     --h3-size: 1.25rem;
-    --big-font: 4rem;
+    --very-big-font: 6.5rem;
+    --title-font-size: 3rem;
+    --big-font: 2.5rem;
     --normal-font: 1rem;
     --small-font: .875rem;
     --smaller-font: .813rem;
@@ -66,7 +71,7 @@ body{
     margin: var(--header-height) 0 0 0;
     font-family: var(--font-family);
     font-size: var(--normal-font);
-    background-color: var(--white);
+    background-color: var(--black);
     color: var(--black);
 }
 
@@ -136,7 +141,7 @@ input{
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--main-color);
+    background-color: transparent;
 }
 
 /* --------------------------NAV BAR---------------------------*/
@@ -153,6 +158,8 @@ input{
 
 .nav-logo{
     font-weight: var(--font-bold);
+    font-size: var(--title-font-size);
+    font-family: var(--title-font-family);
 }
 
 .nav-toggle{
@@ -212,4 +219,107 @@ input{
 /* -----------SHOW MENU----------------*/
 .show-menu{
     right: 0;
+}
+
+/* ----------------HOME-------------------- */
+.home{
+    background-color: var(--black);
+}
+
+.home-data{
+    margin: 20rem 1rem 0rem;
+    width: 16rem;
+}
+
+.home-images{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 35%;
+    background-color: var(--black);
+    opacity: 0.6;
+}
+.home-container{
+    position: relative;
+    height: 60vh;
+    align-content: center;
+    row-gap: 3rem;
+}
+
+.home-data-title,.home-data-subtitle{
+    color: var(--white);
+    font-weight: var(--font-bold);
+}
+
+.home-data-title{
+    transition: 1s;
+    display: block;
+    font-weight: var(--font-bold);
+    font-size: var(--very-big-font);
+    margin-bottom: var(--mg-0-75);
+}
+
+.home-data-subtitle{
+    display: block;
+    font-weight: var(--font-bold);
+    font-size: var(--big-font);
+    margin-bottom: var(--mg-0-75);
+}
+.home-place-scroll{
+    position: relative;
+    margin: 1rem 0 0 45%;
+    background-color: transparent;
+    height: 8rem;
+    overflow: hidden;
+}
+
+.place-select-box{
+    position: relative;
+    background-color: var(--black);
+    height: 8rem;
+    width: 14rem; 
+    display: flex;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    float: left;
+    cursor: pointer;
+}
+
+.place-text{
+    color: var(--white);
+    font-size: 1.7rem;
+    position: absolute;
+    font-weight: 900;
+}
+
+.place-image{
+    position: absolute;
+    width: 100%;
+    max-height: 100%;
+    opacity: .65;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.explore-button{
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 6rem;
+    border-radius: 15px;
+    display: flex;
+    font-weight: var(--font-bold);
+    font-size: var(--normal-font);
+    border-color: var(--white);
+    border-style: solid;
+}
+
+.explore-button:hover{
+    background-color: var(--main-color);
 }
