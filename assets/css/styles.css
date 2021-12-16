@@ -4,7 +4,7 @@
 
 /* ---------------------VARIABLES-----------------------*/
 :root{
-    --header-height: 3rem;
+    --header-height: 3.5rem;
 
     --main-color: rgb(20, 80, 92);
     --white: white;
@@ -157,6 +157,7 @@ input{
 }
 
 .nav-logo{
+    margin: 1rem;
     font-weight: var(--font-bold);
     font-size: var(--title-font-size);
     font-family: var(--title-font-family);
@@ -192,7 +193,7 @@ input{
 }
 
 .nav-link{
-    color: var(--black);
+    color: var(--white);
     font-weight: var(--font-bold);
     text-transform: uppercase;
 }
@@ -241,7 +242,7 @@ input{
     object-position: 35%;
     background-color: var(--black);
     opacity: 0.6;
-}
+    }
 .home-container{
     position: relative;
     height: 60vh;
@@ -321,4 +322,10 @@ input{
 
 .explore-button:hover{
     background-color: var(--main-color);
+}
+
+@media screen and (min-width: 968px){
+    .home-data-subtitle{
+        width: 23rem;
+    }
 }
