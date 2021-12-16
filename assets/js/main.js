@@ -2,31 +2,25 @@
 var variable_css = document.querySelector(':root');
 var variables = getComputedStyle(variable_css);
 
-const navMenu = document.getElementById('nav_menu')
-const navToggle = document.getElementById('nav_toggle')
-const navClose = document.getElementById('nav_close')
+//mobile menu
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLink = document.querySelectorAll(".nav-link");
 
-//show menu
-if(navToggle){
-    navToggle.addEventListener('click',() => {
-        navMenu.classList.add('show-menu')
-    })
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    navLink.forEach(n => n.classList.toggle("active"));
 }
-
 //close menu
-if(navClose){
-    navClose.addEventListener('click',() => {
-        navMenu.classList.remove('show-menu')
-    })
-}
+navLink.forEach(n => n.addEventListener("click", closeMenu));
 
-//remove menu icon
-const navLink = document.querySelectorAll('.nav-link')
-
-function linkAction(){
-    navMenu.classList.remove('show-menu')
+function closeMenu(){
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
 
 //change home bg image
 function changeBgImage(image,place_name,place_bio){
@@ -45,3 +39,18 @@ function scrollFunction() {
     document.getElementById("header").style.background = "transparent";
   }
 }
+
+//place option slider
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 00,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: false,
+  },
+});

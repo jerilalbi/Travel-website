@@ -8,6 +8,8 @@
     <!------------------ICON------------------>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
+    <!-------------------SWIPER---------------->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!------------------CSS-------------------->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -16,12 +18,14 @@
 </head>
 <body>
     <header class="header" id="header">
-        <nav class="nav container">
+        <nav class="navbar">
             <a href="#" class="nav-logo">Voyage</a>
-            <div class="nav-menu" id="nav_menu">
-                <ul class="nav-list">
+                <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#search" class="nav-link">Search</a>
                     </li>
                     <li class="nav-item">
                         <a href="#about" class="nav-link">About</a>
@@ -32,15 +36,11 @@
                     <li class="nav-item">
                         <a href="#contact_us" class="nav-link">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#search" class="nav-link"><i class="ri-search-line"></i></a>
-                    </li>
                 </ul>
-                <i class="ri-close-fill nav-close" id="nav_close"></i>
-                <p class="nav-search">SEARCH</p>
-            </div>
-            <div class="nav-toggle" id="nav_toggle">
-                <i class="ri-function-fill"></i>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </nav>
     </header>
@@ -55,21 +55,30 @@
                     <span class="home-data-subtitle" id="place_bio">World city of culture, politics, media and science.<br></span>
                     <a href="#" class="explore-button">Explore</a>
                 </div>
-                <div class="home-place-scroll">
-                    <div class="place-select-box" 
-                    onclick="changeBgImage('assets/img/berlin.jpg','Berlin','World city of culture, politics, media and science.<br>')"><img src="assets/img/berlin.jpg" alt="" class="place-image"><span class="place-text">Berlin</span></div>
-                    <div class="place-select-box" 
-                    onclick="changeBgImage('assets/img/denver.jpg','Denver','Beta world city by the Globalization <br> and World Cities Research Network')"><img src="assets/img/denver.jpg" alt="" class="place-image"><span class="place-text">Denver</span></div>
-                    <div class="place-select-box" 
-                    onclick="changeBgImage('assets/img/stockhom.jpg','Stockhom','Cultural, media, political, and economic centre of Sweden')"><img src="assets/img/stockhom.jpg" alt="" class="place-image"><span class="place-text">Stockhom</span></div>
-                    <div class="place-select-box" 
-                    onclick="changeBgImage('assets/img/rio.jpg','Rio','Most visited cities in the Southern Hemisphere and is known for its beaches')"><img src="assets/img/rio.jpg" alt="" class="place-image"><span class="place-text">Rio</span></div>
-                    <div class="place-select-box" 
-                    onclick="changeBgImage('assets/img/tokyo.jpg','Tokyo','Most populous metropolitan area in the World')"><img src="assets/img/tokyo.jpg" alt="" class="place-image"><span class="place-text">Tokyo</span></div>
-                    <div class="place-select-box" 
-                    onclick="changeBgImage('assets/img/nairobi.jpg','Nairobi','Established hub for business and culture.')"><img src="assets/img/nairobi.jpg" alt="" class="place-image"><span class="place-text">Nairobi</span></div>
-                    <div class="place-select-box" 
-                    onclick="changeBgImage('assets/img/liverpool.jpg','Liverpool','European capital of culture, architecture and rock music')"><img src="assets/img/liverpool.jpg" alt="" class="place-image"><span class="place-text">Liverpool</span></div>
+                <div class="home-place-swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" onclick="changeBgImage('assets/img/berlin.jpg','Berlin','World city of culture, politics, media and science.<br>')">
+                        <img src="assets/img/berlin.jpg" alt="" class="place-image"><span class="place-text">Berlin</span>
+                    </div>
+                    <div class="swiper-slide" onclick="changeBgImage('assets/img/denver.jpg','Denver','Beta world city by the World Cities Research Network')">
+                        <img src="assets/img/denver.jpg" alt="" class="place-image"><span class="place-text">Denver</span>
+                    </div>
+                    <div class="swiper-slide" onclick="changeBgImage('assets/img/stockhom.jpg','Stockhom','Cultural, media, political, and economic centre of Sweden')">
+                        <img src="assets/img/stockhom.jpg" alt="" class="place-image"><span class="place-text">Stockhom</span>
+                    </div>
+                    <div class="swiper-slide" onclick="changeBgImage('assets/img/rio.jpg','Rio','Most visited cities in the Southern Hemisphere.')">
+                        <img src="assets/img/rio.jpg" alt="" class="place-image"><span class="place-text">Rio</span>
+                    </div>
+                    <div class="swiper-slide" onclick="changeBgImage('assets/img/tokyo.jpg','Tokyo','Most populous metropolitan area in the World')">
+                       <img src="assets/img/tokyo.jpg" alt="" class="place-image"><span class="place-text">Tokyo</span>
+                    </div>
+                    <div class="swiper-slide" onclick="changeBgImage('assets/img/nairobi.jpg','Nairobi','Established hub for business and culture.')">
+                        <img src="assets/img/nairobi.jpg" alt="" class="place-image"><span class="place-text">Nairobi</span>
+                    </div>
+                    <div class="swiper-slide" onclick="changeBgImage('assets/img/liverpool.jpg','Liverpool','European capital of culture, architecture and rock music')">
+                        <img src="assets/img/liverpool.jpg" alt="" class="place-image"><span class="place-text">Liverpool</span>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -87,6 +96,9 @@
         </section>
     </main>
     <!-----------------SCRIPT------------------->
+
+    <!------------------SWIPER--------------------->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-----------------MAIN SCRIPT------------------------->
     <script src="assets/js/main.js"></script>
