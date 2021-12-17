@@ -6,7 +6,8 @@
 :root{
     --header-height: 3.5rem;
 
-    --main-color: rgb(20, 80, 92);
+    /*--main-color: #013763;*/
+    --main-color: #001a4d;
     --white: white;
     --black: black;
 
@@ -268,7 +269,7 @@ input{
 }
 
 .home-data{
-    margin: 23rem 1rem 0 2rem;
+    margin: 6rem 1rem 0 2rem;
     width: 16rem;
 }
 
@@ -328,10 +329,11 @@ input{
   .home-place-swiper{
       position: relative;
       height: 9rem;
-      width: inherit;
+      width: 14.5rem;
       overflow: hidden;
-      margin: 0 0 5.5rem 35%;
+      margin: 5rem 2rem 0 0;
       padding: 0;
+      float: right;
   }
 
 .place-text{
