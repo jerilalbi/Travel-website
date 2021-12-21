@@ -4,7 +4,7 @@
 
 /* ---------------------VARIABLES-----------------------*/
 :root{
-    --header-height: 3.5rem;
+    --header-height: 5.5rem;
 
     /*--main-color: #013763;*/
     --main-color: #001a4d;
@@ -124,6 +124,7 @@ input{
 /* --------------------------HEADER------------------------ */
 
 .header{
+    height: var(--header-height);
     width: 100%;
     position: fixed;
     top: 0;
@@ -261,7 +262,7 @@ input{
 }
 
 .home-data{
-    margin: 14rem 1rem 0 2rem;
+    margin: 15rem 1rem 0 2rem;
     width: 16rem;
 }
 
@@ -368,7 +369,36 @@ input{
     }
 }
 /*-------------------SEARCH----------------------*/
-.search-container{
+.search{
     background-color: var(--white);
     height: calc(100vh - var(--header-height));
+}
+
+.search-container{
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 5rem;
+    height: 100%;
+    width: 100%;
+}
+
+.search-box{
+    background-color: var(--black);
+    height: 100%;
+    width:100%;
+    padding-top: 2rem;
+    background-image: url("../../assets/img/search.jpg");
+    background-size: cover;
+}
+
+.search-title{
+    color: white;
+    font-weight: var(--font-bold);
+    font-size: var(--big-font);
+    text-shadow: 2px 0 0 var(--black), -2px 0 0 var(--black), 0 2px 0 var(--black), 0 -2px 0 var(--black), 1px 1px var(--black), -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    padding: 0;
 }
