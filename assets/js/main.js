@@ -23,6 +23,15 @@ function closeMenu(){
   navLink.forEach(n => n.classList.remove("active"));
 }
 
+//color change active nav-item
+function navColor(e){
+  var itm = document.querySelector(".active-itm");
+  if(itm !==null){
+   itm.classList.remove("active-itm");
+  }
+ e.target.classList.add("active-itm");
+}
+
 //change home bg image
 function changeBgImage(image,place_name,place_bio){
   document.getElementById('background_image').src = image;
@@ -36,8 +45,10 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("header").style.background = variables.getPropertyValue('--main-color');
+    document.getElementById("header").style["boxShadow"] = "0 0 .5rem 0 black";
   } else {
     document.getElementById("header").style.background = "transparent";
+    document.getElementById("header").style["boxShadow"] = "";
   }
 }
 

@@ -183,6 +183,10 @@ input{
     color: aqua;
 }
 
+.nav-link.active-itm{
+    color: aqua;
+}
+
 .hamburger {
     display: none;
 }
@@ -226,7 +230,7 @@ input{
     }
 
     .nav-link.active:hover{
-        color: var(--main-color);
+        color: aqua;
     }
 
     .hamburger {
@@ -291,7 +295,6 @@ input{
 }
 
 .home-data-title{
-    transition: 1s;
     display: block;
     font-weight: var(--font-bold);
     font-size: var(--very-big-font);
@@ -426,7 +429,6 @@ input{
     justify-content: center;
     display: flex;
     cursor: pointer;
-    max-width: 2rem 0;
     height: 3rem;
     width: 15%;
     background-color: var(--main-color);
@@ -444,10 +446,27 @@ input{
     .search-textfield{
         border-radius: 10px;
         margin: 1rem;
+        width: 90%;
     }
     .search-button{
         border-radius: 10px;
         width: 20%;
         margin: 0 1rem;
     }
+}
+
+/*---------------------ABOUT-------------------------*/
+
+.about{
+    background-color: hotpink;
+    height: 50vh;
+    padding: 0 1rem;
+}
+
+.about-container{
+    position: relative;
+    overflow: hidden;
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
 }
