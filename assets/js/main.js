@@ -32,6 +32,26 @@ function navColor(e){
  e.target.classList.add("active-itm");
 }
 
+//while scroll section active 
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-itm')
+        }else{
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-itm')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
 //change home bg image
 function changeBgImage(image,place_name,place_bio){
   document.getElementById('background_image').src = image;

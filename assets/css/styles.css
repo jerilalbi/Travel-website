@@ -470,3 +470,17 @@ input{
     height: 100%;
     width: 100%;
 }
+
+/* -------------------SCROLL BAR CUSTOM--------------------- */
+::-webkit-scrollbar{
+    width: .6rem;
+    background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--main-color);
+}
