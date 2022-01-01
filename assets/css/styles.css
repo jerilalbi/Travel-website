@@ -458,17 +458,89 @@ input{
 /*---------------------ABOUT-------------------------*/
 
 .about{
-    background-color: hotpink;
-    height: 50vh;
+    background-color: var(--white);
+    height: calc(100vh - var(--header-height));
     padding: 0 1rem;
 }
 
 .about-container{
     position: relative;
     overflow: hidden;
-    background-color: aqua;
     height: 100%;
     width: 100%;
+}
+
+.about-first-letter{
+    font-size: var(--big-font);
+    font-weight: bold;
+    font-family: var(--title-font-family);
+}
+
+.about-text-box{
+    width: 40%;
+    height: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-text{
+    width: 100%;
+    font-size: var(--normal-font);
+}
+
+.about-img-box{
+    display: flex;
+    float: left;
+    width: 60%;
+    height: 55%;
+}
+
+.about-img{
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: var(--img-transition);
+}
+
+.about-img1{
+    overflow: hidden;
+    margin: 4rem 1rem 1rem 15%;
+    width: 10rem;
+    height: 15rem;
+    float: right;
+}
+
+.about-img2{
+    overflow: hidden;
+    margin: 2rem .5rem 1rem 0;
+    width: 12rem;
+    height: 19rem;
+    float: right;
+}
+
+.about-img:hover{
+    transform: var(--img-scale);
+}
+
+@media screen and (max-width: 765px){
+    .about-text-box{
+        width: 100%;
+        text-align: center;
+        height: 20%;
+    }
+
+    .about-img-box{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-img1{
+        margin: 4rem 1rem 2.5rem 0;
+    }
 }
 
 /* -------------------SCROLL BAR CUSTOM--------------------- */
