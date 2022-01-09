@@ -91,3 +91,21 @@ var swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false,
   }
 });
+
+//circular percentage bar
+$(window).on("scroll",function(){
+    if($(window).scrollTop() + $(window).height() - 100 >= $(".experience-title-box").offset().top){
+      $(function() {
+        $('.chart').easyPieChart({
+          size: 160,
+          barColor: "#00ffff",
+          scaleLength: 0,
+          lineWidth: 15,
+          trackColor: "#001a4d",
+          lineCap: "circle",
+          animate: 3000,
+        });
+      });
+    }
+  }
+  );
