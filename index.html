@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!------------------ICON------------------>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"> 
 
     <!-------------------SWIPER---------------->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -100,19 +100,21 @@
         <!--------------------ABOUT----------------------->
         <section class="about" id="about">
             <div class="about-container">
-                <div class="about-text-box">
-                    <div class="about-text">
-                        <span class="about-first-letter">V</span>
-                        <span>oyage has been focused on bringing our customers the best in esteem and quality travel game plans. 
-                            We are enthusiastic about movement and sharing the world’s marvels on the relaxation travel side</span>
+                <div class="about1-sect">
+                    <div class="about-text-box">
+                        <div class="about-text">
+                            <span class="about-first-letter">V</span>
+                            <span>oyage has been focused on bringing our customers the best in esteem and quality travel game plans. 
+                                We are enthusiastic about movement and sharing the worlds marvels on the relaxation travel side</span>
+                        </div>
                     </div>
-                </div>
-                <div class="about-img-box">
-                    <div class="about-img1">
-                        <img src="assets/img/about_img2.jpg" class="about-img" alt="">
-                    </div>
-                    <div class="about-img2">
-                        <img src="assets/img/about_img1.jpg" class="about-img" alt="">
+                    <div class="about-img-box">
+                        <div class="about-img1">
+                            <img src="assets/img/about_img2.jpg" class="about-img" alt="">
+                        </div>
+                        <div class="about-img2">
+                            <img src="assets/img/about_img1.jpg" class="about-img" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="experience-title-box">
@@ -141,25 +143,225 @@
         </section>
         <!-------------------EXPLORE------------------------->
         <section class="explore" id="explore">
-            
+            <div class="explore-title-box">
+                <span class="explore_title">Explore The Most <br>Attractive Places</span>
+            </div>
+            <div class="explore-places-swiper exploreSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" onclick="changeBgImage('assets/img/berlin.jpg','Berlin','World city of culture, politics, media and science.<br>')">
+                      <img src="assets/img/explore/london.jpg" alt="" class="explore-image"><span class="place-text">London</span> <span class="explore-place-text">19 Tours Available</span>
+                  </div>
+                  <div class="swiper-slide" onclick="changeBgImage('assets/img/denver.jpg','Denver','Beta world city by the World Cities Research Network')">
+                      <img src="assets/img/explore/India.jpg" alt="" class="explore-image"><span class="place-text">India</span> <span class="explore-place-text">11 Tours Available</span>
+                  </div>
+                  <div class="swiper-slide" onclick="changeBgImage('assets/img/stockhom.jpg','Stockhom','Cultural, media, political, and economic centre of Sweden')">
+                      <img src="assets/img/explore/norway.jpg" alt="" class="explore-image"><span class="place-text">Norway</span> <span class="explore-place-text">20 Tours Available</span>
+                  </div>
+                  <div class="swiper-slide" onclick="changeBgImage('assets/img/rio.jpg','Rio','Most visited cities in the Southern Hemisphere.')">
+                      <img src="assets/img/explore/new_york.jpg" alt="" class="explore-image"><span class="place-text">New York</span> <span class="explore-place-text">25 Tours Available</span>
+                  </div>
+                  <div class="swiper-slide" onclick="changeBgImage('assets/img/tokyo.jpg','Tokyo','Most populous metropolitan area in the World')">
+                     <img src="assets/img/explore/maldives.jpg" alt="" class="explore-image"><span class="place-text">Maldives</span> <span class="explore-place-text">28 Tours Available</span>
+                  </div>
+                  <div class="swiper-slide" onclick="changeBgImage('assets/img/nairobi.jpg','Nairobi','Established hub for business and culture.')">
+                      <img src="assets/img/explore/paris.jpg" alt="" class="explore-image"><span class="place-text">Paris</span> <span class="explore-place-text">11 Tours Available</span>
+                  </div>
+                  <div class="swiper-slide" onclick="changeBgImage('assets/img/liverpool.jpg','Liverpool','European capital of culture, architecture and rock music')">
+                      <img src="assets/img/explore/dubai.jpg" alt="" class="explore-image"><span class="place-text">Dubai</span> <span class="explore-place-text">21 Tours Available</span>
+                  </div>
+              </div>
+          </div>
+          <div class="explore-view-more">
+              View More &gt;&gt;
+          </div>
+          <!---------------------REVIEWS---------------------------->
+        <section id="testimonials">
+            <div class="testimonial-box-container">
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="assets/img/testimonis/arnold.jpg" />
+                            </div>
+                            <div class="name-user">
+                                <strong>Alexender Arnold, England</strong>
+                                <span>@trendAlexArno66</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <p>I had a fantastic experience with both my Greece and Turkey trip. In Greece I was in Athens and Santorini ( the hotel in Santorini is one the best I have ever stayed). Our travel partner was Voyage Travel and Grace Solomon was the person to go</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="assets/img/testimonis/vandjk.jpg" />
+                            </div>
+                            <div class="name-user">
+                                <strong>Van Dijk, Netherlands</strong>
+                                <span>@vvdijk4</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <p>Excellent itinerary design by the Voyage team for Singapore. Traveled with child and senior citizens all arrangements were satisfactory. </p>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="assets/img/testimonis/gerrard.jpg" />
+                            </div>
+                            <div class="name-user">
+                                <strong>Steven Gerrad, Egypt</strong>
+                                <span>@StvGrad</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <p> We all can not thank you enough for an excellent trip you organized for us to The Andaman & Nicobar Islands. Thanks to your meticulous planning everything was fantastic and we had no issue whatsoever.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="assets/img/testimonis/salah.jpg" />
+                            </div>
+                            <div class="name-user">
+                                <strong>Mohamed Salah, Egypt</strong>
+                                <span>@MoSalah</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <p>We would like to thank Voyage Travels for organising wonderful tour for us in Delhi, Agra and Rajasthan. Everything was very well organised. Thank you very much for everything</p>
+                    </div>
+                </div>
+            </div>
         </section>
+        </section>
+        
         <!-------------------CONTACT US------------------------->
         <section class="contact-us" id="contact_us">
-            
+            <div class="container">
+                <div class="content">
+                    <div class="left-side">
+                      <div class="address details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Address</div>
+                        <div class="text-one">VP Nagar, Kuttkad</div>
+                        <div class="text-two">N.Paravur 42</div>
+                      </div>
+                      <div class="phone details">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Phone</div>
+                        <div class="text-one">+98 9893 5647</div>
+                        <div class="text-two">+96 3434 5678</div>
+                      </div>
+                      <div class="email details">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>
+                        <div class="text-one">voyage@gmail.com</div>
+                        <div class="text-two">info.voyage@gmail.com</div>
+                      </div>
+                    </div>
+                    <div class="right-side">
+                      <div class="topic-text">Send us a message</div>
+                      <p>If you have any work from us or any types of quries related to our tours, you can send us message from here. It's my pleasure to help you.</p>
+                    
+                      <form id="contact_form" method="post" action="">
+                      <div class="input-box">
+                        <input type="text" id="fname" placeholder="Enter your name">
+                      </div>
+                      <div class="input-box">
+                        <input type="text" id="lname" placeholder="Enter your email">
+                      </div>
+                      <div class="input-box message-box">
+                        <input type="text" id="message" placeholder="Enter your message">
+                      </div>
+                      <div class="button">
+                        <input type="submit" value="Send Now" >
+                      </div>
+                    </form>
+                  </div>
+                  </div>
+            </div>
         </section>
     </main>
     <!-----------------SCRIPT------------------->
 
-    <!------------------SWIPER--------------------->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    
     <!----------------------JQUERY------------------->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
     <!----------------------CIRCULAR PROGRESS BAR------------------>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
-    
+   
+    <!------------------SWIPER--------------------->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-----------------MAIN SCRIPT------------------------->
     <script src="assets/js/main.js"></script>
+
+    <!-----------Font-Awesome-------------------->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    
+    <!---------------------FORM SUBMISSION------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script>
+        $("#contact_form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbzJH0wVfCk_EPosJTZgnlhZfGJRMNl8ZPfCLSeBn0kuU9jnMJPlGwRJSIGSqvcQFKq1/exec",
+                data:$("#contact_form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 </body>
 </html>

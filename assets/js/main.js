@@ -109,3 +109,23 @@ $(window).on("scroll",function(){
     }
   }
   );
+
+  //explore  swiper
+var Exploreswiper = new Swiper(".exploreSwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  }
+});
