@@ -129,3 +129,56 @@ var Exploreswiper = new Swiper(".exploreSwiper", {
     disableOnInteraction: false,
   }
 });
+
+//form validation
+function validateForm(){
+  var form =  document.contact_form
+  var name = form.name.value;
+  var email = form.email.value;
+  var message = form.message.value;
+
+  var atPos = email.indexOf('@');
+  var dotPos = email.lastIndexOf('.');
+
+  /* Name Check */
+  if(name.trim() == ''){
+    document.getElementById('nameMiss').innerHTML = 'Enter the Name'
+  }else{    
+    document.getElementById('nameMiss').innerHTML = ''
+  }
+
+  /* Email Check */
+  if(email.trim() == ''){
+    document.getElementById('emailMiss').innerHTML = 'Enter the Email'
+  }else if(atPos<1 || dotPos<atPos+2 || dotPos+2>=email.length ){
+    document.getElementById('emailMiss').innerHTML = 'Check the Email Address'
+  }else{
+    document.getElementById('emailMiss').innerHTML = ''
+  }
+
+  /* Message Check */
+  if(message.trim() == ''){
+    document.getElementById('messageMiss').innerHTML = 'Enter a Message'
+  }else{    
+    document.getElementById('messageMiss').innerHTML = ''
+  }
+  
+}
+
+//contact us form email sent 
+$("#contact_form").submit((e)=>{
+  e.preventDefault()
+  $.ajax({
+      url:"https://script.google.com/macros/s/AKfycbzJH0wVfCk_EPosJTZgnlhZfGJRMNl8ZPfCLSeBn0kuU9jnMJPlGwRJSIGSqvcQFKq1/exec",
+      data:$("#contact_form").serialize(),
+      method:"post",
+      success:function (response){
+          alert("Form submitted successfully")
+          window.location.reload()
+      },
+      error:function (err){
+          alert("Something Error")
+
+      }
+  })
+})

@@ -14,9 +14,12 @@
     <!------------------CSS-------------------->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!---------------------LOGO------------------->
+    <link rel="shortcut icon" href="assets/img/logo.png">
     <title>Voyage</title>
 </head>
 <body>
+    <!---------------------HEADER----------------------->
     <header class="header" id="header">
         <nav class="navbar" id="navbar">
             <a href="#" class="nav-logo">Voyage</a>
@@ -175,7 +178,7 @@
               View More &gt;&gt;
           </div>
           <!---------------------REVIEWS---------------------------->
-        <section id="testimonials">
+        <div id="testimonials">
             <div class="testimonial-box-container">
                 <div class="testimonial-box">
                     <div class="box-top">
@@ -232,7 +235,7 @@
                                 <img src="assets/img/testimonis/gerrard.jpg" />
                             </div>
                             <div class="name-user">
-                                <strong>Steven Gerrad, Egypt</strong>
+                                <strong>Steven Gerrad, England</strong>
                                 <span>@StvGrad</span>
                             </div>
                         </div>
@@ -273,7 +276,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         </section>
         
         <!-------------------CONTACT US------------------------->
@@ -304,28 +307,89 @@
                       <div class="topic-text">Send us a message</div>
                       <p>If you have any work from us or any types of quries related to our tours, you can send us message from here. It's my pleasure to help you.</p>
                     
-                      <form id="contact_form" method="post" action="">
+                      <form id="contact_form" name="contact_form" action="/" onsubmit="validateForm()">
                       <div class="input-box">
-                        <input type="text" id="fname" placeholder="Enter your name">
+                        <input type="text" name="name" placeholder="Enter your name" >
                       </div>
+                      <div class="error" id="nameMiss"></div>
+
                       <div class="input-box">
-                        <input type="text" id="lname" placeholder="Enter your email">
+                        <input type="text" name="email" placeholder="Enter your email">
                       </div>
+                      <div class="error" id="emailMiss"></div>
+
                       <div class="input-box message-box">
-                        <input type="text" id="message" placeholder="Enter your message">
+                        <input type="text" name="message" placeholder="Enter your message" >
                       </div>
+                      <div class="error" id="messageMiss"></div>
+
                       <div class="button">
-                        <input type="submit" value="Send Now" >
+                        <input type="submit" id="sendBtn" value="Send Now" >
                       </div>
                     </form>
                   </div>
                   </div>
             </div>
         </section>
+        <!-----------------------FOOTER-------------------------->
+        <footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="assets/img/logo.png">
+				<h3><span>Voyage</span></h3>
+
+				<p class="footer-links">
+					<a href="#home">Home</a>
+					|
+					<a href="#search">Search</a>
+					|
+					<a href="#about">About</a>
+					|
+					<a href="#explore">Explore</a>
+                    |
+					<a href="#contact_us">Contact US</a>
+				</p>
+
+				<p class="footer-company-name">© 2022 Voyage Travels Pvt. Ltd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>VP Nagar, Kuttkad N.Paravur 42</span></p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+98 9893 5647</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@eduonix.com">voyage@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>Become A Partner</span>
+					We offer a partnering program to become a part of Voyage, Click to know more</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+        <div class="created-tag">
+                <span>Website Created By  </span><a href="https://jerilalbi.live"><span class="creator-name">Jeril Albi</span></a>
+        </div>
     </main>
     <!-----------------SCRIPT------------------->
 
     
+    <!---------------------FORM SUBMISSION------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!----------------------JQUERY------------------->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
@@ -340,28 +404,6 @@
 
     <!-----------Font-Awesome-------------------->
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-    
-    <!---------------------FORM SUBMISSION------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-    <script>
-        $("#contact_form").submit((e)=>{
-            e.preventDefault()
-            $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbzJH0wVfCk_EPosJTZgnlhZfGJRMNl8ZPfCLSeBn0kuU9jnMJPlGwRJSIGSqvcQFKq1/exec",
-                data:$("#contact_form").serialize(),
-                method:"post",
-                success:function (response){
-                    alert("Form submitted successfully")
-                    window.location.reload()
-                },
-                error:function (err){
-                    alert("Something Error")
-    
-                }
-            })
-        })
-    </script>
 </body>
 </html>
+<!--git master move to head, git branch -f master HEAD-->
