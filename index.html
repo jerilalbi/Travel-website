@@ -14,6 +14,9 @@
     <!------------------CSS-------------------->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!--------------------MAP--------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1/leaflet.css" />
+
     <!---------------------LOGO------------------->
     <link rel="shortcut icon" href="assets/img/logo.png">
     <title>Voyage</title>
@@ -88,16 +91,13 @@
         <!--------------------SEARCH-------------------->
         <section class="search" id="search">
             <div class="search-container">
-                <div class="search-box">
-                    <div class="search-title">
-                        <span>FIND THE PERFECT PLACE TO GO</span>
-                    </div>
+                <div class="search-map-box">
+                    <img src="assets/img/map.jpg" class="map-img" alt="">
+                </div>
                     <div class="search-textfield-box">
-                        <input type="text" placeholder="Search Places" class="search-textfield">
+                        <input type="text" id="search-input" placeholder="Where Are You Going  ?" class="search-textfield">
                         <div class="search-button">Search</div>
                     </div>
-                    <img src="assets/img/search.jpg" class="search-img" alt="">
-                </div>
             </div>
         </section>
         <!--------------------ABOUT----------------------->
@@ -393,6 +393,9 @@
     <!----------------------JQUERY------------------->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
+    <!--------------------------MAPS---------------------->
+    <script src="https://cdn.jsdelivr.net/leaflet/1/leaflet.js"></script>
+
     <!----------------------CIRCULAR PROGRESS BAR------------------>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
    
@@ -406,4 +409,4 @@
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </body>
 </html>
-<!--git master move to head, git branch -f master HEAD-->
+<!--git master move to head, git branch -f master HEAD  -->
