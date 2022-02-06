@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <!-------------CSS--------->
+      <link rel="stylesheet" href="assets/css/become_partner.css">
+    
+    <!------------------LOGO------------------>
+    <link rel="shortcut icon" href="assets/img/logo.png">
+    <title>Become a Partner</title>
+</head>
+<body>
+    <!---------------------HEADER------------------------>
+    <header class="header" id="header">
+        <span class="brand">Voyage</span> <span class="brand partner-text"> Partner</span>
+    </header>
+
+    <!-----------------------HOME------------------------>
+    <section class="home">
+        <div class="home-title-box">
+            <span class="home-title">Powerful Solution For Your Travel Agency <br></span>
+            <span class="home-sub-title">“Alone we can do so little together we can do so much.”<br></span>
+            <div class="register-btn"> <a href="signin_partner.html">Register</div></a>
+        </div>
+        <div class="login-box">
+            <h2 class="login-title">Log In</h2>
+            <form name="login_customer" id="login_customer" onsubmit="return signInValidate()" action="index.html">
+                <div class="input-box">
+                    <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <input type="email" id="email" name="email" placeholder="Email" >
+                </div>
+                <div class="error" id="emailMiss"></div>
+
+                <div class="input-box">
+                    <span><i class="fa fa-key" aria-hidden="true"></i></span>
+                    <input type="password" id="password" name="password" placeholder="Password" >
+                </div>
+                <div class="error" id="passMiss"></div>
+
+                <div class="forget-account-section">
+                    <input type="checkbox">
+                    <span>Remember Me</span>
+                    <span class="forget-password">Forget Password ?</span>
+                </div>
+                <div>
+                   <input type="submit" id="btn" class="submit-btn">
+                </div>
+                <div class="no-account">
+                    Dont't have an account ? 
+                   <a href="signin_partner.html"><span class="register">Register</span></a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

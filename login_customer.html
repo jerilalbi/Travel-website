@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---------------CSS---------------->
+    <link rel="stylesheet" href="assets/css/login_customer.css">
+    <link rel="shortcut icon" href="assets/img/logo.png">
+    <title>Log In</title>
+</head>
+<body>
+    <section class="login-bg">
+        <div class="login-box-wrapper">
+            <div class="login-box">
+                <h1 class="top-text">Welcome Back</h1>
+                <p class="subtitle">Make A Sail With Voyage</p>
+                <h2 class="login-title">Log In</h2>
+                <form name="login_customer" id="login_customer" onsubmit="return signInValidate()" action="index.html">
+                    <div class="input-box">
+                        <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                        <input type="email" id="email" name="email" placeholder="Email" >
+                    </div>
+                    <div class="error" id="emailMiss"></div>
+
+                    <div class="input-box">
+                        <span><i class="fa fa-key" aria-hidden="true"></i></span>
+                        <input type="password" id="password" name="password" placeholder="Password" >
+                    </div>
+                    <div class="error" id="passMiss"></div>
+
+                    <div class="forget-account-section">
+                        <input type="checkbox">
+                        <span>Remember Me</span>
+                        <span class="forget-password">Forget Password ?</span>
+                    </div>
+                    <div>
+                       <input type="submit" id="btn" class="submit-btn">
+                    </div>
+                    <div class="no-account">
+                        Dont't have an account ? 
+                       <a href="signin-customer.html"><span class="register">Register</span></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+
+        // login screen validation
+    var form = document.login_customer
+function signInValidate(){
+  return (emailValidate() && passwordValidate());
+}
+
+function emailValidate(){
+  var email = form.email.value
+    var atPos = email.indexOf('@');
+    var dotPos = email.lastIndexOf('.');
+    var emailAccess = false;
+
+    if(email.trim() == ''){
+    document.getElementById('emailMiss').innerHTML = 'Enter the Email Id'
+  } else if(atPos<1 || dotPos<atPos+2 || dotPos+2>=email.length ){
+    document.getElementById('emailMiss').innerHTML = 'Check the Email Address'
+  } else{
+    document.getElementById('emailMiss').innerHTML = ''
+    emailAccess = true
+  }
+  return emailAccess;
+}
+
+function passwordValidate(){
+  var password = form.password.value
+  var passAccess =  false;
+  if(password.trim() == ''){
+    document.getElementById('passMiss').innerHTML = 'Enter the Password'
+  }else if(password.trim().length() <= 5){
+    document.getElementById('passMiss').innerHTML = 'Password must of length 6'
+  }else{
+    document.getElementById('passMiss').innerHTML = ''
+    passAccess = true
+  }
+  return passAccess;
+}
+    </script>
+    <!-----------Font-Awesome-------------------->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</body>
+</html>
