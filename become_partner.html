@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!------------------ICON------------------>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
       <!-------------CSS--------->
       <link rel="stylesheet" href="assets/css/become_partner.css">
     
@@ -19,15 +22,15 @@
     </header>
 
     <!-----------------------HOME------------------------>
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-title-box">
             <span class="home-title">Powerful Solution For Your Travel Agency <br></span>
             <span class="home-sub-title">“Alone we can do so little together we can do so much.”<br></span>
-            <div class="register-btn"> <a href="signin_partner.html">Register</div></a>
+            <a href="signin_partner.html"><div class="register-btn">Register</div></a>
         </div>
         <div class="login-box">
             <h2 class="login-title">Log In</h2>
-            <form name="login_customer" id="login_customer" onsubmit="return signInValidate()" action="index.html">
+            <form name="login_partner" id="login_partner" onsubmit="return signInValidate()" action="index.html">
                 <div class="input-box">
                     <span><i class="fa fa-user" aria-hidden="true"></i></span>
                     <input type="email" id="email" name="email" placeholder="Email" >
@@ -55,5 +58,117 @@
             </form>
         </div>
     </section>
+    <!-- our partners -->
+    <section class="our-partners">
+        <div class="our-partner-title">
+            <span>Our Partners</span>
+        </div>
+        <div class="our-partners-logo-box">
+            <div class="our-partners-img-box">
+                <img src="assets/img/trip_advisor.png" class="our-partner-logo" alt="">
+            </div>
+            <div class="our-partners-img-box">
+                <img src="assets/img/expedia.png" class="our-partner-logo" alt="">
+            </div>
+            <div class="our-partners-img-box">
+                <img src="assets/img/make_my_trip.png" class="our-partner-logo small-logo" alt="">
+            </div>
+            <div class="our-partners-img-box">
+                <img src="assets/img/yatra.png" class="our-partner-logo small-logo" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- our features -->
+    <section class="our-features">
+        <div class="feature-title-box">
+            <span class="feature-title-text">OUR FEATURES <br></span>
+            <span>Provide awesome services <br> with our tools</span>
+        </div>
+        <div class="features-card-box">
+            <div class="feature-card">
+                <span class="feature-card-title">Increase the Reach to 10M <br></span>
+                <div class="feature-card-logo-circle"><i class="fa fa-line-chart"></i></div><br>
+                <span class="feature-card-des">Increase the Reach to 10M <br></span>
+            </div>
+            <div class="feature-card">
+                <span class="feature-card-title">User - Friendly Dashboard <br></span>
+                <div class="feature-card-logo-circle"><i class="fa fa-dashcube"></i></div><br>
+                <span class="feature-card-des">User Friendly Dashboard <br></span>
+            </div>
+            <div class="feature-card">
+                <span class="feature-card-title">Increase the Revenue by 10x <br></span>
+                <div class="feature-card-logo-circle"><i class="fa fa-dollar-sign"></i></div><br>
+                <span class="feature-card-des">Increase the Revenue by 10x <br></span>
+            </div>
+            <div class="feature-card">
+                <span class="feature-card-title">Pay Only for Successful Bookings <br></span>
+                <div class="feature-card-logo-circle"><i class="fa fa-file-invoice-dollar"></i></div><br>
+                <span class="feature-card-des">Pay Only for Successful Bookings <br></span>
+            </div>
+        </div>
+    </section>
+    <!-- success  -->
+    <section class="success">
+        <div class="success-showcase-box">
+            <div class="success-title">
+                <span>Everything About Success</span>
+            </div>
+            <div class="success-show-box">
+                <div class="sucess-box">
+                    <div class="feature-card-logo-circle"><i class="fa fa-dollar-sign"></i></div><br>
+                    <span class="success-show-text">45000<i class="fa fa-dollar-sign"></i></span>
+                    <span class="feature-card-des">Investment</span>
+                </div>
+                <div class="sucess-box">
+                    <div class="feature-card-logo-circle"><i class="fa fa-trophy"></i></div><br>
+                    <span class="success-show-text">15+</span>
+                    <span class="feature-card-des">Awards</span>
+                </div>
+                <div class="sucess-box">
+                    <div class="feature-card-logo-circle"><i class="fa fa-gift"></i></div><br>
+                    <span class="success-show-text">480075<i class="fa fa-dollar-sign"></i></span>
+                    <span class="feature-card-des">Profitability</span>
+                </div>
+                <div class="sucess-box">
+                    <div class="feature-card-logo-circle"><i class="fa fa-line-chart"></i></div><br>
+                    <span class="success-show-text">20%</span>
+                    <span class="feature-card-des">Growth</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- commission section -->
+    <section class="money">
+        <div class="money-box">
+            <div class="money-img"></div>
+            <div class="money-text-box">
+                <div class="money-heading">
+                    <span>Pay only for Successful Bookings</span>
+                </div>
+                <div class="money-des">
+                    <span>The Company only charge 5% of the package amount which are successfully booked. There is no fixed amount for showing your tour packages. <b>Come lets Grow Together</b></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- last section -->
+    <section class="last-sect">
+        <div class="last-sect-box">
+            <div class="last-title">
+                We Are Creative Dreamers and Innovators
+            </div>
+            <div class="last-des">
+                We focus on the needs of small to middle market businesses to improve and grow their return. Start working with us that can provide everything you need.
+            </div>
+            <div class="last-btn-box">
+               <a href="#home"><div class="lats-btn1">Get Started</div></a>
+                <a href="signin_partner.html"><div class="lats-btn2">Register</div></a>
+            </div>
+        </div>
+    </section>
+    <!-- main script -->
+    <script src="assets/js/become_partner.js"></script>
+    <!-----------Font-Awesome-------------------->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </body>
 </html>

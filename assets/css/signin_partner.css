@@ -1,0 +1,155 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* -------------LOGIN BACKGROUND -------------------- */
+
+.login-bg{
+    min-height: 100vh;
+    background: url(../img/partners_signin.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    align-items:center;
+    padding: 40px;
+}
+
+.login-bg::before{
+    background-color: rgba(47, 51, 66, 0.664);
+    content: "";
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.login-box-wrapper{
+    width: 100%;
+}
+
+.login-box{
+    width: 400px;
+    height: 25rem;
+    margin: auto auto auto 10rem;
+    position: absolute;
+    text-align: center;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: white;
+    opacity: .8;
+    border-radius: 10px;
+    padding-top: 5rem;
+}
+
+.top-text{
+    font-size: 38px;
+    color: white;
+}
+/* The way to get started is to quit talking and begin doing.” */
+.input-box{
+    height: 50px;
+    width: 80%;
+    padding: 0px 0px;
+    position: relative;
+    padding-left: 5px;
+    margin: 0 auto 1rem auto;
+    border: 1px solid black;
+    border-radius:6px;
+    color: black;
+    font-size: 20px;
+}
+
+.error{
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    top: -10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="Password"] {
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+::placeholder {
+    color: black;
+  }
+
+  .submit-btn{
+      width: 80%;
+      height: 3.5rem;
+      margin: 2rem auto 0 auto;
+      background-color: #2eca8b;
+      border-radius: 10px;
+      border-width: 0;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      font-weight: bold;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+  }
+
+  .quotes-box{
+    width: 600px;
+    height: 200px;
+    margin: auto 10% auto auto;
+    position: absolute;
+    text-align: center;
+    top: 0; left: 0; bottom: 0; right: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width: 1284px) {
+    .quotes-box{
+        margin-right: 5%;
+        width: 500px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 1084px) {
+    .quotes-box{
+        margin-right: 3%;
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .quotes-box{
+        display: none;
+    }
+}
+
+  @media screen and (max-width: 765px) {
+      .login-box{
+          margin: auto auto auto auto;
+      }
+  }
