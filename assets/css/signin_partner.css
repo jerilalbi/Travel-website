@@ -28,7 +28,7 @@ body{
 }
 
 .login-bg::before{
-    background-color: rgba(47, 51, 66, 0.664);
+    background-color: rgba(28, 28, 31, 0.664);
     content: "";
     position: absolute;
     top: 0;
