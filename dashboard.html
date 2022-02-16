@@ -13,6 +13,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/dashboard.css">
 
+    <!-- BAR CHART -->
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+
     <!------------------LOGO------------------>
     <link rel="shortcut icon" href="assets/img/logo.png">
     <title>Dashboard</title>
@@ -27,7 +30,9 @@
         <div class="side-options"><i class="fa fa-user"></i> Profile</div>
         <div class="side-options"><i class="fa fa-sign-out"></i> Sign Out</div>
         <hr style="color: white;">
-        <div class="home-page-btn"> <i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp; Home</div>
+        <a href="index.html"><div class="home-page-btn"> <i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp; Home</div></a>
+        <hr style="color: white;">
+        <a href="index.html"><div class="home-page-btn" style="background-color: rgb(6, 43, 122); font-size: 17px;"> <i class="fa fa-plus" aria-hidden="true"></i> &nbsp; Add Packages</div></a>
         </div>
         <div class="col-xl-10 main-menu p-5">
             <div class="title-box">
@@ -38,24 +43,39 @@
             <div class="top-box" style="margin-top: 2rem; display: flex; justify-content: space-evenly;">
             <div class="col-xl-2 top-value-box">
                 <span class="box-title">REVENUE</span> <br>
-                <span>$ 450310</span>
+                <span>$ 45031</span>
+                <i class="fa fa-usd" style="margin-left: 4rem; color: aquamarine;" aria-hidden="true"></i>
             </div>
             <div class="col-xl-2 top-value-box">
-                <span class="box-title">REVENUE</span> <br>
-                <span>$ 450310</span>
+                <span class="box-title">BOOKINGS</span> <br>
+                <span> 5904</span>
+                <i class="fa fa-plane" style="margin-left: 6rem; color: aquamarine;" aria-hidden="true"></i>
             </div>
             <div class="col-xl-2 top-value-box">
-                <span class="box-title">REVENUE</span> <br>
-                <span>$ 450310</span>
+                <span class="box-title">VIEWS</span> <br>
+                <span> 9643</span>
+                <i class="fa fa-eye" style="margin-left: 5rem; color: aquamarine;" aria-hidden="true"></i>
             </div>
             <div class="col-xl-2 top-value-box">
-                <span class="box-title">REVENUE</span> <br>
-                <span>$ 450310</span>
+                <span class="box-title">COMMISSION</span> <br>
+                <span>$ 2251</span>
+                <i class="fa fa-money" style="margin-left: 4rem; color: aquamarine;" aria-hidden="true"></i>
             </div>
+            </div>
+            <div class="col-xl-6 bar-chart-box">
+                <canvas id="barChart" style="width:100%;max-width:600px"></canvas>
+            </div>
+            <div class="col-xl-5 bar-chart-box">
+                <canvas id="donutChart" style="width:100%;max-width:600px;"></canvas>
             </div>
         </div>
     </div>
-    
+    <!-- BAR CHART -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <!-- MAIN JAVASCRIPT -->
+    <script src="assets/js/dashboard.js"></script>
+
     <!-- BOOTSTRAP -->
      <srcipt src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

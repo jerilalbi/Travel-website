@@ -5,6 +5,11 @@ html{
 
 body{
     height: 100%;
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
 }
 
 .row{
@@ -94,4 +99,11 @@ body{
     color: #8db5e6;
     font-size: 15px;
     font-weight: bold;
+}
+
+.bar-chart-box{
+    float: left;
+    margin-left: 2rem;
+    margin-top: 5rem;
+    height: 22.5rem;
 }
