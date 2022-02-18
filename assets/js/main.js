@@ -110,34 +110,6 @@ $(window).on("scroll",function(){
   }
   );
 
-  //google-map-autocomplete
-  // function myMap() {
-  //   var mapProp= {
-  //     center:new google.maps.LatLng(51.508742,-0.120850),
-  //     zoom:5,
-  //   };
-  //   var map = new google.maps.Map(document.getElementById("google-map"),mapProp);
-  //   }
-
-//     function initMap() {
-//       const input = document.getElementById("location_search");
-//       const autocomplete = new google.maps.places.Autocomplete(input);
-//       autocomplete.addListener("place_changed", () => {
-//           const place = autocomplete.getPlace();
-//           console.dir(place);
-//       });
-//   }
-//   function myMap() {
-// var mapProp= {
-// center:new google.maps.LatLng(51.508742,-0.120850),
-// zoom:5,
-// };
-// var map = new google.maps.Map(document.getElementById("google-map"),mapProp);
-// var marker = new google.maps.Marker({position: myCenter});
-
-// marker.setMap(map);
-// }
-
 function initMap() {
   var map = new google.maps.Map(document.getElementById('google-map'), {
     center: {lat: 10.8505, lng: 76.2711},
