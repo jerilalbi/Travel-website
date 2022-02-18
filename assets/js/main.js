@@ -110,6 +110,16 @@ $(window).on("scroll",function(){
   }
   );
 
+  //google-map-autocomplete
+  $(document).ready(function(){
+    var autocomplete;
+    var id = 'location_search';
+
+    autocomplete = new google.maps.places.autocomplete((document.getElementById(id)),{
+      types: ['geocode'],
+    })
+  })
+
   //explore  swiper
 var Exploreswiper = new Swiper(".exploreSwiper", {
   effect: "coverflow",

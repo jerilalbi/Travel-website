@@ -14,8 +14,7 @@
     <!------------------CSS-------------------->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!--------------------MAP--------------------->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="//github.com/downloads/lafeber/world-flags-sprite/flags16.css">
 
     <!---------------------LOGO------------------->
     <link rel="shortcut icon" href="assets/img/logo.png">
@@ -91,11 +90,11 @@
         <!--------------------SEARCH-------------------->
         <section class="search" id="search">
             <div class="search-container">
-                <div class="search-map-box">
+                <div class="search-map-box" id="google-map">
                     <img src="assets/img/map.jpg" class="map-img" alt="">
                 </div>
                     <div class="search-textfield-box">
-                        <input type="text" id="search-input" placeholder="Where Are You Going  ?" class="search-textfield">
+                        <input type="text" id="location_search" placeholder="Where Are You Going  ?" class="search-textfield">
                         <div class="search-button">Search</div>
                     </div>
             </div>
@@ -390,11 +389,9 @@
     
     <!---------------------FORM SUBMISSION------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!----------------------JQUERY------------------->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
-    <!--------------------------MAPS---------------------->
-    <script src="https://cdn.jsdelivr.net/leaflet/1/leaflet.js"></script>
+    <!----------------------JQUERY------------------->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> -->
 
     <!----------------------CIRCULAR PROGRESS BAR------------------>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
@@ -404,6 +401,9 @@
 
     <!-----------------MAIN SCRIPT------------------------->
     <script src="assets/js/main.js"></script>
+
+    <!--------------------MAP--------------------->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALAW5alnlxHhyXgZ-UJnZ6xdY12i4vle8&libraries=places" async defer></script>
 
     <!-----------Font-Awesome-------------------->
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
