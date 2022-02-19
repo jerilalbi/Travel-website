@@ -53,10 +53,15 @@ function scrollActive(){
 window.addEventListener('scroll', scrollActive)
 
 //change home bg image
-function changeBgImage(image,place_name,place_bio){
+localStorage.setItem('place_lat','52.5200');
+localStorage.setItem('place_long','13.4050');
+
+function changeBgImage(image,place_name,place_bio,lat,long){
   document.getElementById('background_image').src = image;
   document.getElementById('place_name').innerHTML = place_name;
   document.getElementById('place_bio').innerHTML = place_bio;
+  localStorage.setItem('place_lat',lat);
+  localStorage.setItem('place_long',long);
 }
 
 //change color of the nav bar when scroll
@@ -110,7 +115,9 @@ $(window).on("scroll",function(){
   }
   );
 
-function initMap() {
+  //map
+
+  function initMap() {
   var map = new google.maps.Map(document.getElementById('google-map'), {
     center: {lat: 10.8505, lng: 76.2711},
     zoom: 2
