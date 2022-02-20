@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Merriweather:wght@300;400;700;900&family=Redressed&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+.row{
+    --bs-gutter-x: 0;
+}
+
+.header{
+    background-color: #001a4d;
+    height: 4rem;
+    color: white;
+    vertical-align: middle;
+    line-height: 4rem;
+    padding: 0 2rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Redressed', cursive;
+}
+
+.card{
+    margin: 1rem;
+    box-shadow: 10px 10px 8px #888888;
+}
+
+.card:hover{
+    box-shadow: 10px 10px 8px #204a9e;
+}
+
+.card_img{
+    height: 10rem;
+}
