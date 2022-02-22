@@ -32,3 +32,27 @@ html{
     margin: 10rem 0 0 5rem;
     font-family: 'Dancing Script', cursive;
 }
+
+.side-data-box{
+    height: 19rem;
+    background-color: white;
+    margin: 25rem 0 1rem auto;
+    position: relative;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow-y: scroll;
+}
+
+.card{
+    margin: 1rem;
+}
+
+/* -------------------SCROLL BAR CUSTOM--------------------- */
+::-webkit-scrollbar{
+    width: .4rem;
+    background-color: blue;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+}
