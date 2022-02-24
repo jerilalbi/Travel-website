@@ -779,6 +779,8 @@ function changeData(){
     document.getElementById('cover-img').style.backgroundImage=`url(${data[Number(localStorage.getItem('package_index'))]['coverImg']})`;
     document.getElementById('place-text').innerHTML = data[Number(localStorage.getItem('package_index'))]['name'];
     document.getElementById('side-img').src = data[Number(localStorage.getItem('package_index'))]['sideImg'];
+
+    localStorage.setItem('place_name',data[Number(localStorage.getItem('package_index'))]['name'])
 }
 
 changeData();

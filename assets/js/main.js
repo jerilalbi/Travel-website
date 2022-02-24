@@ -55,6 +55,7 @@ window.addEventListener('scroll', scrollActive)
 //change home bg image
 localStorage.setItem('place_lat','52.5200');
 localStorage.setItem('place_long','13.4050');
+localStorage.setItem('search-check','false')
 
 function changeBgImage(image,place_name,place_bio,lat,long){
   document.getElementById('background_image').src = image;
@@ -116,7 +117,6 @@ $(window).on("scroll",function(){
   );
 
   //map
-
   function initMap() {
   var map = new google.maps.Map(document.getElementById('google-map'), {
     center: {lat: 10.8505, lng: 76.2711},
@@ -158,6 +158,10 @@ $(window).on("scroll",function(){
       }));
       marker.setPosition(place.geometry.location);
       marker.setVisible(true);
+
+      localStorage.setItem('place_lat',place.geometry.location.lat());
+      localStorage.setItem('place_long',place.geometry.location.lng());
+      localStorage.setItem('search-check','true');
   
       var address = '';
       if (place.address_components) {

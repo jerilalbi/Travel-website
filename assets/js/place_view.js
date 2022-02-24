@@ -28,14 +28,19 @@ function addList(array, element){
 
 addList(data,list);
 
+//search or explore
+if(localStorage.getItem('search-check') != 'true'){
+    document.getElementById('search_input').style.display = 'none'
+    document.getElementById('search_btn').style.display = 'none'
+}
+
 //map
 function initMap() {
-    console.log("Lat = "+Number(localStorage.getItem('place_lat'))+ "long = "+Number(localStorage.getItem('place_long')))
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: Number(localStorage.getItem('place_lat')), lng: Number(localStorage.getItem('place_long'))},
       zoom: 13
     });
-    var input = document.getElementById('location_search');
+    var input = document.getElementById('search_input');
   
     var autocomplete = new google.maps.places.Autocomplete(input);
     autocomplete.bindTo('bounds', map);
