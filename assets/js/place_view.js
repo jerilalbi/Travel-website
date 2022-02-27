@@ -1,33 +1,3 @@
-var data = [
-    {
-        'name': 'Jeril Albi',
-        'age': 18
-    },
-    {
-        'name': 'Trent Aranold',
-        'age': 24
-    },
-    {
-        'name': 'Vandijk',
-        'age': 29
-    },
-    {
-        'name': 'alison',
-        'age': 30
-    },
-]
-
-const list = document.getElementById('list');
-function addList(array, element){
-    array.forEach(e => {
-        const li = document.createElement('li');
-        li.textContent = e.name
-        element.appendChild(li);
-    });
-}
-
-addList(data,list);
-
 //search or explore
 if(localStorage.getItem('search-check') != 'true'){
     document.getElementById('search_input').style.display = 'none'
@@ -77,6 +47,9 @@ function initMap() {
         marker.setPosition(place.geometry.location);
         marker.setVisible(true);
     
+        localStorage.setItem('place_lat',place.geometry.location.lat());
+        localStorage.setItem('place_long',place.geometry.location.lng());
+
         var address = '';
         if (place.address_components) {
             address = [
@@ -89,4 +62,46 @@ function initMap() {
         infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
         infowindow.open(map, marker);
     });
+  }
+
+  //API Fetch
+  function place_attraction(lat,lng){
+    fetch(`https://travel-advisor.p.rapidapi.com/attractions/list-by-latlng?longitude=${lng}&latitude=${lat}&lunit=km&currency=USD&lang=en_US`, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
+            "x-rapidapi-key": "d8bb2d3d02msh15482b0d942a663p1751e6jsnf05b2c79ff7a"
+        }
+    })
+    .then(response => {
+        return response.json();
+    }).then((data) => {
+        console.log(data.data[0].photo.images.medium.url)
+        var side_data = '';
+        data['data'].map((value,index) => {
+            if(data.data[index].location_id != '186337'){
+                side_data += `
+            <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="${data.data[index].photo.images.medium.url}" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">${data.data[index].name}</h5>
+                          <p class="card-text">${data.data[index].description}</p>
+                        </div>
+            </div>
+            `
+            }
+        });
+        document.getElementById('show_data').innerHTML = side_data;
+    })
+    .catch(err => {
+        console.error(err);
+    });
+  }
+  
+  place_attraction(Number(localStorage.getItem('place_lat')),Number(localStorage.getItem('place_long')));
+
+  var submit_btn = document.getElementById('search_btn');
+  submit_btn.onclick = function(){  
+      console.log(Number(localStorage.getItem('place_lat')))
+      place_attraction(Number(localStorage.getItem('place_lat')),Number(localStorage.getItem('place_long')));
   }

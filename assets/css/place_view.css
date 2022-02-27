@@ -28,6 +28,12 @@ html{
     float: right;
 }
 
+.title-type{
+    font-size: 20px;
+    font-weight: bold;
+    color: #001a4d;
+}
+
 ::placeholder{
     font-size: 25px;
     color: white;
@@ -87,7 +93,9 @@ input[type="text"] {
 }
 
 .side-sect{
-    background-color: aquamarine;
+    background-color: rgb(231, 231, 231);
+    overflow-y: scroll;
+    height: calc(100vh - 4rem);
 }
 
 .left-top-text{
@@ -122,4 +130,8 @@ select{
     height: 38rem;
     padding: 2rem;
     margin: 2rem;
+}
+
+.card{
+    margin-top: 1rem;
 }
