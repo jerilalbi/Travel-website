@@ -60,3 +60,65 @@ new Chart("donutChart", {
     },
   }
 });
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var submit_btn = document.getElementById("submit_btn");
+var span = document.getElementsByClassName("close")[0];
+
+var image1 = document.getElementById("cover_image");
+var image2 = document.getElementById("side_image");
+var logo_img = document.getElementById("logo_image");
+
+var place_name = document.getElementById('place_name');
+var place_desc = document.getElementById("place_desc");
+var tour_duration = document.getElementById("tour_duration");
+var place_visited = document.getElementById("places_visit");
+var tour_price = document.getElementById("tour_price");
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+submit_btn.onclick = function(){
+  var baseData = JSON.parse(localStorage.getItem('all_tours_data'));
+  var basePackageData = JSON.parse(localStorage.getItem('tour_package_data'));
+  const cover_img = image1.files[0];
+  const side_img = image2.files[0];
+  const logo_image = logo_img.files[0];
+
+  baseData.push({
+    name: place_name.value,
+    desc: place_desc.value,
+    img: `assets/img/new/${cover_img.name}`
+  });
+
+  basePackageData.push({
+    name: place_name.value,
+    coverImg: `assets/img/new/${cover_img.name}`,
+    sideImg: `assets/img/new/${side_img.name}`,
+    package: [
+      {
+        duration: tour_duration.value,
+        part_logo: `assets/img/new/${logo_image.name}`,
+        places: place_visited.value,
+        price: `$ ${tour_price.value}`,
+      },
+    ]
+  });
+  
+  console.log(basePackageData[16]['package'])
+  modal.style.display = "none";
+  localStorage.setItem('all_tours_data',JSON.stringify(baseData));
+  localStorage.setItem('tour_package_data',JSON.stringify(basePackageData));
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

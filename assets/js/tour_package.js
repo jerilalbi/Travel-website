@@ -763,7 +763,16 @@ function changeData(){
     ]
     
     let show_data = '';
-    data[Number(localStorage.getItem('package_index'))]['package'].map((value) => {
+    var tour_package_data_array = JSON.parse(localStorage.getItem('tour_package_data'));
+    var tour_package_data;
+    if(tour_package_data_array != null && tour_package_data_array.length != data.length){
+        tour_package_data = tour_package_data_array;
+    }else{
+    localStorage.setItem('tour_package_data',JSON.stringify(data));
+    tour_package_data = JSON.parse(localStorage.getItem('tour_package_data'));
+    }
+
+    tour_package_data[Number(localStorage.getItem('package_index'))]['package'].map((value) => {
         show_data += `
         <div class="card" style="width: 28rem;">
                         <div class="card-body">
@@ -776,11 +785,11 @@ function changeData(){
     });
 
     document.getElementById('pack_data').innerHTML = show_data;
-    document.getElementById('cover-img').style.backgroundImage=`url(${data[Number(localStorage.getItem('package_index'))]['coverImg']})`;
-    document.getElementById('place-text').innerHTML = data[Number(localStorage.getItem('package_index'))]['name'];
-    document.getElementById('side-img').src = data[Number(localStorage.getItem('package_index'))]['sideImg'];
+    document.getElementById('cover-img').style.backgroundImage=`url(${tour_package_data[Number(localStorage.getItem('package_index'))]['coverImg']})`;
+    document.getElementById('place-text').innerHTML = tour_package_data[Number(localStorage.getItem('package_index'))]['name'];
+    document.getElementById('side-img').src = tour_package_data[Number(localStorage.getItem('package_index'))]['sideImg'];
 
-    localStorage.setItem('place_name',data[Number(localStorage.getItem('package_index'))]['name'])
+    localStorage.setItem('place_name',tour_package_data[Number(localStorage.getItem('package_index'))]['name']);
 }
 
 changeData();

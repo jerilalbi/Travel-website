@@ -32,7 +32,56 @@
         <hr style="color: white;">
         <a href="index.html"><div class="home-page-btn"> <i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp; Home</div></a>
         <hr style="color: white;">
-        <a href="index.html"><div class="home-page-btn" style="background-color: rgb(6, 43, 122); font-size: 17px;"> <i class="fa fa-plus" aria-hidden="true"></i> &nbsp; Add Packages</div></a>
+        <a href="#"><div class="home-page-btn" id="myBtn" style="background-color: rgb(6, 43, 122); font-size: 17px;"> <i class="fa fa-plus" aria-hidden="true"></i> &nbsp; Add Packages</div></a>
+
+        <!-- Model Section -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="new-package-text">Add New Package<span class="close">&times;</span></span>
+              <div class="input-box">
+                  <input type="text" class="input" id="place_name" placeholder="Place Name">
+                  <div class="wrapper">
+                    <div class="file-upload">
+                      <input type="file" id="cover_image">
+                      <i class="fa fa-arrow-up"></i>
+                    </div>
+                    <span class="file-text">Cover Image</span>
+                  </div>
+                  <div class="wrapper">
+                    <div class="file-upload">
+                      <input type="file" id="side_image">
+                      <i class="fa fa-arrow-up"></i>
+                    </div>
+                    <span class="file-text">Side Image</span>
+                  </div>
+                  <div class="wrapper">
+                    <div class="file-upload">
+                      <input type="file" id="logo_image">
+                      <i class="fa fa-arrow-up"></i>
+                    </div>
+                    <span class="file-text">Company Logo</span>
+                  </div>
+              </div>
+              <div class="input-box-desc">
+                <textarea type="text" class="input" id="place_desc" placeholder="Place Description"></textarea>
+              </div>
+              <div class="input-box-tour-wrap">
+                  <div class="input-tour-details">
+                    <input type="text" class="input" id="tour_duration" placeholder="Tour Duration">
+                  </div>
+                  <div class="input-tour-details">
+                    <input type="text" class="input" id="places_visit" placeholder="Places Vistited">
+                </div>
+                <div class="input-tour-details">
+                    <input type="text" class="input" id="tour_price" placeholder="Tour Price in Dollar">
+                </div>
+              </div>
+              <div class="input-submit-btn" id="submit_btn">
+                  <span>SUBMIT</span>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="col-xl-10 main-menu p-5">
             <div class="title-box">
