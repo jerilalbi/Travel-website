@@ -32,99 +32,9 @@
 
     <!-- Main Script -->
     <script>
-      var tour_data = [
-        {
-          name: 'London',
-          desc: 'London is the city region with the highest population in the United Kingdom.',
-          img: 'assets/img/all_tours/london.jpg',
-        },
-        {
-          name: 'Maldives',
-          desc: 'This tropical country has separated islands and islands are surrounded by its own lagoon.',
-          img: 'assets/img/all_tours/maldives.jpg',
-        },
-        {
-          name: 'Dubai',
-          desc: 'This United Arab Emirates city is a luxury travel destination for leisure and business travellers.',
-          img: 'assets/img/all_tours/dubai.jpg',
-        },
-        {
-          name: 'Berlin',
-          desc: 'Berlin, the capital city of Germany, is renowned for its exceptional range of landmarks, vibrant cultural scene',
-          img: 'assets/img/all_tours/berlin.jpg',
-        },
-        {
-          name: 'Paris',
-          desc: 'Paris (nicknamed the "City of light") is the capital city of France, and the largest city in France',
-          img: 'assets/img/all_tours/paris.jpg',
-        },
-        {
-          name: 'Liverpool',
-          desc: 'Liverpool is a city located in the North West of England, situated on the estuary of the River Mersey that opens out into the Irish Sea.',
-          img: 'assets/img/all_tours/liverpool.jpg',
-        },
-        {
-          name: 'India',
-          desc: 'India is a beautiful country with unity in diversity. India has rich in heritage and its culture',
-          img: 'assets/img/all_tours/india.jpg',
-        },
-        {
-          name: 'Denver',
-          desc: 'It has a big-city feel, with a vibrant downtown, great architectural variety, lovely city neighborhoods and parks,',
-          img: 'assets/img/all_tours/denver.jpg',
-        },
-        {
-          name: 'Norway',
-          desc: 'Norway is a narrow country in northern Europe. It shares the Scandinavian Peninsula with Sweden and Finland.',
-          img: 'assets/img/all_tours/norway.jpg',
-        },
-        {
-          name: 'Tokyo',
-          desc: 'Tokyo offers a seemingly unlimited choice of shopping, entertainment, culture and dining to its visitors',
-          img: 'assets/img/all_tours/tokyo.jpg',
-        },
-        {
-          name: 'New York',
-          desc: 'New York is the most populous and the most international city in the country',
-          img: 'assets/img/all_tours/newyork.jpg',
-        },
-        {
-          name: 'Stockholm',
-          desc: 'Stockholm is simultaneously urban and close to nature; water is an ever-present feature in this city where lake and sea meet',
-          img: 'assets/img/all_tours/stockholm.jpg',
-        },
-        {
-          name: 'Venice',
-          desc: 'Venice is built on 118 small islands that are separated by 150 canals. People cross the canals by many small bridges.',
-          img: 'assets/img/all_tours/venice.jpg',
-        },
-        {
-          name: 'Rio',
-          desc: 'Rio de Janeiro is one of the most visited cities in the Southern Hemisphere and is known for its natural settings',
-          img: 'assets/img/all_tours/rio.jpg',
-        },
-        {
-          name: 'Amsterdam',
-          desc: 'Amsterdam, city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.',
-          img: 'assets/img/all_tours/amsterdam.jpg',
-        },
-        {
-          name: 'Nairobi',
-          desc: 'Nairobi, popularly known as “Green City in the Sun” has an amazing culture, which is unparalleled in any other city.',
-          img: 'assets/img/all_tours/nairobi.jpg',
-        },
-      ];
 
         var front_data = '';
-        var data = JSON.stringify()
-        var got_tour_data = JSON.parse(localStorage.getItem('all_tours_data'));
-        var tour_data_array;
-        if(got_tour_data != null && got_tour_data.length != tour_data.length){
-          tour_data_array = got_tour_data;
-        } else{ 
-          localStorage.setItem('all_tours_data',JSON.stringify(tour_data));
-          tour_data_array = JSON.parse(localStorage.getItem('all_tours_data'));
-        }
+        var tour_data_array = JSON.parse(localStorage.getItem('all_tours_data'));
       
         tour_data_array.map((value,index) => {
           front_data += 
@@ -134,7 +44,8 @@
                 <div class="card-body">
                   <h5 class="card-title">${value.name}</h5>
                   <p class="card-text">${value.desc}</p>
-                  <a href="#" class="btn btn-primary" onclick="packageOpen('${index}')">View Packages</a>                </div>
+                  <a href="#" class="btn btn-primary" onclick="packageOpen('${index}')">View Packages</a>
+                  </div>
               </div>
           `
         });

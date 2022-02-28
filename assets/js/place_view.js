@@ -76,16 +76,16 @@ function initMap() {
     .then(response => {
         return response.json();
     }).then((data) => {
-        console.log(data.data[0].photo.images.medium.url)
         var side_data = '';
+        console.log(data.data);
         data['data'].map((value,index) => {
-            if(data.data[index].location_id != '186337'){
-                side_data += `
+            if(data.data[index].ad_position == undefined){
+                    side_data += `
             <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="${data.data[index].photo.images.medium.url}" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">${data.data[index].name}</h5>
                           <p class="card-text">${data.data[index].description}</p>
+                          <a href="${data.data[index].web_url}" class="btn btn-primary">View More</a>
                         </div>
             </div>
             `
