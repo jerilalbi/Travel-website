@@ -24,7 +24,20 @@
         <div class="col-xl-3 side-sect">
             <span class="left-top-text">Explore Around you</span> <br>
             <div class="type-sect">
-            <label for="type" style="margin-right: 1rem;">TYPE: &nbsp;<span class="title-type">ATTRACTIONS</span></label>
+            <label for="type" style="margin-right: 1rem;">TYPE: </label>
+            <select name="" id="type_select" class="type-box">
+                <option value="attraction" >Attractions</option>
+                <option value="restaurants" >Restaurants</option>
+            </select>
+            </div>
+            <div class="address-box">
+                <div class="address" id="show_place_address"></div>
+                <div class="weather-box">
+                    <img id="weather_img" src="assets/img/rainy.png" class="weather-img" alt="">
+                    <div class="weather-value-box">
+                        <span class="weather-data" id="weather_data">  </span>
+                    </div>
+                </div>
             </div>
             <div class="container">
                 <div class="row" style="justify-content: center;" id="show_data">
