@@ -40,7 +40,7 @@ function passwordValidate(){
   var passAccess =  false;
   if(password.trim() == ''){
     document.getElementById('passMiss').innerHTML = 'Enter the Password'
-  }else if(password.trim().length() <= 5){
+  }else if(password.trim().length <= 5){
     document.getElementById('passMiss').innerHTML = 'Password must of length 6'
   }else{
     document.getElementById('passMiss').innerHTML = ''

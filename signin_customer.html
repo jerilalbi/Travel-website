@@ -17,7 +17,7 @@
                 <h1 class="top-text">Start Sailing</h1>
                 <p class="subtitle">Make A Sail With Voyage</p>
                 <h2 class="login-title">Make An Account</h2>
-                <form name="login_customer" id="login_customer" onsubmit="signInValidate()" action="booked.html">
+                <form name="login_customer" id="login_customer" onsubmit="return signInValidate()" action="booked.html">
                     <div class="input-box">
                         <span><i class="fa fa-user" aria-hidden="true"></i></span>
                         <input type="text" name="name" placeholder="Name" >
@@ -89,19 +89,19 @@ function emailValidate(){
 
 function passwordValidate(){
   var password = form.fpassword.value
-  var passAccess =  false;
 
   if(password.trim() == ''){
     document.getElementById('passMiss').innerHTML = 'Enter the Password'
-  }else if(password.trim().length() <= 5){
+    return false;
+  }else if(password.trim().length <= 5){
     document.getElementById('passMiss').innerHTML = 'Password must of length 6'
+    return false;
     console.log("password not 6")
   }else{
     document.getElementById('passMiss').innerHTML = ''
-    passAccess = true
     console.log("password correct")
+    return true;
   }
-  return passAccess;
 }
 
 function confirmPassword(){
@@ -113,7 +113,6 @@ function confirmPassword(){
    }else{
      return true;
    }
-   return false;
 }
     </script>
     <!-----------Font-Awesome-------------------->
