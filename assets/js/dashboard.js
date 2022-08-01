@@ -84,8 +84,87 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
+function placeNameCheck(){
+  if(place_name.value.trim() == ''){
+    document.getElementById('place_name_box').style.borderColor = "red";
+    return false;
+  }else{
+    document.getElementById('place_name_box').style.borderColor = "#254c7c";
+    return true;
+  }
+}
+
+function placeDescCheck(){
+  if(place_desc.value.trim() == ''){
+    document.getElementById('place_desc_box').style.borderColor = 'red';
+    return false;
+  }else{
+    document.getElementById('place_desc_box').style.borderColor = '#254c7c';
+    return true;
+  }
+}
+
+function placeImageCheck(image){
+  switch(image){
+    case 1: if(image1.value == ''){
+      document.getElementById('image1').style.backgroundColor = 'red';
+      return false;
+    }else{
+      document.getElementById('image1').style.backgroundColor = '#254c7c';
+      return true;
+    }
+
+    case 2: if(image2.value == ''){
+      document.getElementById('image2').style.backgroundColor = 'red';
+      return false;
+    }else{
+      document.getElementById('image2').style.backgroundColor = '#254c7c';
+      return true;
+    }
+
+    case 3: if(logo_img.value == ''){
+      document.getElementById('image3').style.backgroundColor = 'red';
+      return false;
+    }else{
+      document.getElementById('image3').style.backgroundColor = '#254c7c';
+      return true;
+    }
+  }
+}
+
+function placeDurationCheck(){
+  if(tour_duration.value.trim() == ''){
+    document.getElementById('tour_duration_check').style.borderColor = "red";
+    return false;
+  }else{
+    document.getElementById('tour_duration_check').style.borderColor = "#254c7c";
+    return true;
+  }
+}
+
+function placeVisitCheck(){
+  if(place_visited.value.trim() == ''){
+    document.getElementById('place_vist_check').style.borderColor = "red";
+    return false;
+  }else{
+    document.getElementById('place_vist_check').style.borderColor = "#254c7c";
+    return true;
+  }
+}
+
+function placePriceCheck(){
+  if(tour_price.value.trim() == ''){
+    document.getElementById('tour_price_check').style.borderColor = "red";
+    return false;
+  }else{
+    document.getElementById('tour_price_check').style.borderColor = "#254c7c";
+    return true;
+  }
+}
+
 submit_btn.onclick = function(){
-  var baseData = JSON.parse(localStorage.getItem('all_tours_data'));
+  if(placeNameCheck() && placeDescCheck() && placeImageCheck(1) && placeImageCheck(2) && placeImageCheck(3) && placeDurationCheck() && placeVisitCheck() && placePriceCheck()){
+    var baseData = JSON.parse(localStorage.getItem('all_tours_data'));
   var basePackageData = JSON.parse(localStorage.getItem('tour_package_data'));
   const cover_img = image1.files[0];
   const side_img = image2.files[0];
@@ -115,6 +194,7 @@ submit_btn.onclick = function(){
   modal.style.display = "none";
   localStorage.setItem('all_tours_data',JSON.stringify(baseData));
   localStorage.setItem('tour_package_data',JSON.stringify(basePackageData));
+  }
 }
 
 window.onclick = function(event) {
